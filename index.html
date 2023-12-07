@@ -1,13 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 <body>
+<div id="my-elem">Element</div>
 <script>
-    let message;
-message = 'Hello!';
-alert(message);
-document.body.style.background = 'red';
-setTimeout(() => document.body.style.background = '', 3000);
+// получить элемент
+let elem = document.getElementById('my-elem');
+// сделать его фон красным
+elem.style.background = 'red';
+// сделать его цвет белым
+elem.style.color = 'white';
+// сделать его ширину в 200px
+elem.style.width = "200px";
 </script>
-<p>...После скрипта.</p>
 </body>
 </html>
