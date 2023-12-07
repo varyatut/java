@@ -1,16 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<div id="my-elem">Element</div>
+<div id="вdiv">Element</div>
+<style>
+.alert {
+padding: 15px;
+border: 1px solid #d6e9c6;
+margin-left: auto;
+margin-right: auto;
+border-radius: 4px;
+color: #3c763d;
+background-color: #dff0d8;
+text-align:center;
+width:200px;
+}
 <script>
-// получить элемент
-let elem = document.getElementById('my-elem');
-// сделать его фон красным
-elem.style.background = 'red';
-// сделать его цвет белым
-elem.style.color = 'white';
-// сделать его ширину в 200px
-elem.style.width = "200px";
+let div = document.createElement('div');
+div.className = "alert";
+div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+document.body.append(div);
 </script>
 </body>
 </html>
