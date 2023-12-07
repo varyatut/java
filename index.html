@@ -1,24 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<div id="вdiv">Element</div>
-<style>
-.alert {
-padding: 15px;
-border: 1px solid #d6e9c6;
-margin-left: auto;
-margin-right: auto;
-border-radius: 4px;
-color: #3c763d;
-background-color: #dff0d8;
-text-align:center;
-width:200px;
-}
+<div id="text">Этот элемент будет исчезать</div>
+<input id="dis_text" type="button" value="Исчезни">
 <script>
-let div = document.createElement('div');
-div.className = "alert";
-div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
-document.body.append(div);
+    document.addEventListener("DOMContentLoaded",hiddenCloseclick());
+    document.getElementById('dis_text').addEventListener("click",hiddenCloseclick);
+    function hiddenCloseclick(){
+    let elem=document.getElementById('text');
+    if (elem.style.display=="none"){
+        elem.style.display="block";
+    } else{
+        ELEM.STYLE.DISPLAY="none"}
+    }
+    
+    
 </script>
 </body>
 </html>
