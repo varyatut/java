@@ -1,21 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<div id="text">Этот элемент будет исчезать</div>
-<input id="dis_text" type="button" value="Исчезни">
+    <div style="display: none">Исчезающий текст</div>
+    <button>Исчезни</button>
 <script>
-    function hiddenCloseclick(){
-    if (elem.style.display=="none"){
-        elem.style.display="block";
-    } else{
-        elem.style.display="none"}
-    }
-    document.addEventListener("DOMContentLoaded",hiddenCloseclick());
-    document.getElementById('dis_text').addEventListener("click",hiddenCloseclick);
-    let elem=document.getElementById('text');
-    dis_text.onclick=function hiddenCloseclick()
-    
-    
+    let btn = document.querySelector('button');
+    let el = document.querySelector('div');
+    btn.addEventListener('click',()=>{
+        el.style.display==='none'? el.style.display ='block':el.style.display = 'none';
+    });
 </script>
 </body>
 </html>
