@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html>
-<body id="block">
+<body>
     <div style="display: none">Исчезающий текст</div>
     <button>Исчезни</button>
     <div id="text" style="color: rgb(0, 195, 255);">Текст с меняющимся цветом</div>
     <button onclick="changeColor(text)">Изменить цвет</button>
     <div>Кнопка, чтобы изменить цвет фон</div>
-    <button onclick="changeColorButton">Изменить цвет фона</button>
+    <button type="button" onclick="myFunction()">Изменить цвет фона</button>
 
 <script>
     let btn = document.querySelector('button');
@@ -16,8 +16,9 @@
     });
     const color=document.getElementById('text').style.color;
     const changeColor = e => e.style.color = e.style.color === color ? 'green':color;
-    const color=document.getElementById('block').body.style.background;
-    const changeColorButton = c => c.body.style.background = c.body.style.background === color ? 'blue':color;
+    function myFunction(){
+        document.getElementById("background").stylecolor="blue";
+    }
 </script>
 </body>
 </html>
