@@ -5,9 +5,9 @@
     <button>Исчезни</button>
     <div id="text" style="color: rgb(0, 195, 255);">Текст с меняющимся цветом</div>
     <button onclick="changeColor(text)">Изменить цвет</button>
-    <div id="block">Кнопка, чтобы изменить цвет фон
-    <button id="changeColorButton">Изменить цвет фона</button>
-</div>
+    <div id="block">Кнопка, чтобы изменить цвет фон</div>
+    <button onclick="changeColorButton">Изменить цвет фона</button>
+
 <script>
     let btn = document.querySelector('button');
     let el = document.querySelector('div');
@@ -16,9 +16,8 @@
     });
     const color=document.getElementById('text').style.color;
     const changeColor = e => e.style.color = e.style.color === color ? 'green':color;
-    document.getElementById("changeColorButton").addEventListener("click",function(){
-        document.getElementById(block).style.backgroundColor = rgb(0, 195, 255);
-    })
+    const colour=document.getElementById('block').body.style.background;
+    const changeColorButton = c => c.body.style.background = c.body.style.background === colour ? 'rgb(0, 195, 255)':colour;
 </script>
 </body>
 </html>
