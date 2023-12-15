@@ -9,6 +9,11 @@
     <button type="button" onclick="myFunction()">Изменить цвет фона</button>
     <img id="myImage" src="3.jpg" width="350" height="350" >
     <button onclick="decreaseSize()">Уменьшить размер</button>
+    <div id="name"></div>
+    <form id="MyForm">
+        <input type="text" placeholder="Имя" id="form-name">
+        <input type="submit">
+    </form>
 <script>
     let btn = document.querySelector('button');
     let el = document.querySelector('div');
@@ -25,6 +30,10 @@
         img.width = img.width - 50;
         img.height = img.height - 150;
     }
+    document.getElementById('MyForm').addEventListener('submit', function(enter){
+        enter.preventDefault();
+        document.getElementById('name').innerHTML = document.getElementById('form-name').value
+    })
 </script>
 </body>
 </html>
