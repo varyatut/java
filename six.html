@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+   
 <body>
     <style>
         body.dark-theme{
@@ -10,17 +11,17 @@
             background: aliceblue;
             color: black;
         }
+
     </style>
-    <button>Переключатель</button>
-    <p>Предшественники современных компьютерных экранов, такие как электронно-лучевые осциллографы, строили графики и представли другую информацию в виде светящихся следов на чёрном фоне.
+    <button onclick="classList.toggle()">Переключатель</button>
+    <p id="elem" class="dark-theme light-theme">Предшественники современных компьютерных экранов, такие как электронно-лучевые осциллографы, строили графики и представли другую информацию в виде светящихся следов на чёрном фоне.
 
         Впоследствии компьютеры стали использовать в качестве дисплея ЭЛТ, где темный фосфор экрана (фон) ярко светился, когда на него падал электронный луч. На экранах RGB, чтобы сформировать белый цвет, все 3 луча должны быть включены.
         
         Противоположная цветовая схема была представлена позже, в текстовых процессорах WYSIWYG, для имитации чернил на бумаге.</p>
 <script>
-    const btn = document.querySelector('button');
-    btn.addEventListener("click", function(){
-        documnt.body.classlist.togle("dark.theme");
-    });
+    let elem = document.querySelector('#elem');
+    elem.classList.toggle('light-theme');
+    
 </script>
     </body>
