@@ -7,8 +7,8 @@
     <button onclick="changeColor(text)">Изменить цвет</button>
     <div>Кнопка, чтобы изменить цвет фон</div>
     <button type="button" onclick="myFunction()">Изменить цвет фона</button>
-    <img id="photo" src="3.jpg" >
-    <button id="knopka">Изменить размер</button>
+    <img id="myImage" src="3.jpg" width="350" height="350" >
+    <button onclick="decreaseSize()">Уменьшить размер</button>
 <script>
     let btn = document.querySelector('button');
     let el = document.querySelector('div');
@@ -20,10 +20,10 @@
     function myFunction(){
         document.body.style.background="blue";
     }
-    document.querySelector('knopka').onClick=function(){
-        var image = document.getElementById('photo');
-        image.style.width='100px';
-        image.style.height = 'auto';
+    function decreaseSize(){
+        var img = document.getElementById('myImage');
+        img.width = img.width - 50;
+        img.height = img.height - 150;
     }
 </script>
 </body>
