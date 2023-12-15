@@ -7,7 +7,8 @@
     <button onclick="changeColor(text)">Изменить цвет</button>
     <div>Кнопка, чтобы изменить цвет фон</div>
     <button type="button" onclick="myFunction()">Изменить цвет фона</button>
-
+    <img id="photo" src="3.jpg" >
+    <button id="knopka">Изменить размер</button>
 <script>
     let btn = document.querySelector('button');
     let el = document.querySelector('div');
@@ -18,6 +19,11 @@
     const changeColor = e => e.style.color = e.style.color === color ? 'green':color;
     function myFunction(){
         document.body.style.background="blue";
+    }
+    document.querySelector('knopka').onClick=function(){
+        const image = document.getElementById('photo');
+        image.style.width='100px';
+        image.style.height = 'auto';
     }
 </script>
 </body>
